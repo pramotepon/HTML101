@@ -9,74 +9,128 @@
   <body>
     <h1>Travel reservation form</h1>
     <h3>* denotes mandotory</h3>
-
-    <div>
-      <label for="fullname">Full name* :</label><br />
-      <input
-        type="text"
-        class="text"
-        id="fullname"
-        placeholder="FirstName LastName"
-      />
-    </div>
-    <div>
-      <label for="email">Email address* :</label><br />
-      <input type="email" class="text" id="email" placeholder="EMAIL_ADDRESS" />
-    </div>
-    <div>
-      <label for="package">Select Tour Package* :</label><br />
-      <select name="package" id="package">
-        <option value="Goa">Goa</option>
-      </select>
-    </div>
-    <div>
-      <label for="arrival_date">Arrival date*:</label><br />
-      <input type="date" id="arrival_date" placeholder="m/d/y" />
-    </div>
-    <div>
-      <label for="number_person">Number of persons*:</label><br />
-      <input type="number" id="number_person" placeholder="UNKNOW_TYPE" />
-    </div>
-    <div>
-      <label for="">What would you want to avail?*:</label><br />
-      <label for="boarding">Boarding</label>
-      <input
-        type="checkbox"
-        name="avail_checkbox[]"
-        id="boarding"
-        value="boarding"
-      /><br />
-      <label for="fooding">Fooding</label>
-      <input
-        type="checkbox"
-        name="avail_checkbox[]"
-        id="fooding"
-        value="fooding"
-      /><br />
-      <label for="sight_seeing">Sight seeing</label>
-      <input
-        type="checkbox"
-        name="avail_checkbox[]"
-        id="sight_seeing"
-        value="sight_seeing"
-      /><br />
-    </div>
-    <div>
-      <label for="discount_code">Discount Coupon code: </label><br />
-      <input
-        type="text"
-        class="text"
-        id="discount_code"
-        placeholder="UNKNOW_TYPE"
-      />
-    </div>
-    <div>
-        <label for="terms_and_conditions_section">Terms and conditions*</label><br />
-        <input type="radio" name="terms_and_conditions" id="agree" value="agree" checked>
+    <!-- Form สำหรับใส่ข้อมูล -->
+    <form action="" method="post">
+      <!-- กล่องใส่ Field Full Name -->
+      <div>
+        <!-- หัวข้อของ Fullname -->
+        <label for="fullname">Full name* :</label><br />
+        <!-- Input FullName -->
+        <input
+          type="text"
+          class="text"
+          id="fullname"
+          placeholder="FirstName LastName"
+          required
+        />
+      </div>
+      <!-- กล่องใส่ Field Email -->
+      <div>
+        <!-- หัวข้อของ Email -->
+        <label for="email">Email address* :</label><br />
+        <!-- Input Email -->
+        <input
+          type="email"
+          class="text"
+          id="email"
+          placeholder="EMAIL_ADDRESS"
+          required
+        />
+      </div>
+      <!-- กล่องใส่ Field Tour package -->
+      <div>
+        <!-- หัวข้อของ Tour Package -->
+        <label for="package">Select Tour Package* :</label><br />
+        <!-- Input Select Tour Package -->
+        <select name="package" id="package" required>
+          <option value="Goa">Goa</option>
+        </select>
+      </div>
+      <!-- กล่องใส่ Arrival date -->
+      <div>
+        <!-- หัวข้อของ Arrival date -->
+        <label for="arrival_date">Arrival date*:</label><br />
+        <!-- Input Arrival date -->
+        <input type="date" id="arrival_date" placeholder="m/d/y" required />
+      </div>
+      <!-- กล่องใส่ Number of person -->
+      <div>
+        <!-- หัวข้อของ Number of person -->
+        <label for="number_person">Number of persons*:</label><br />
+        <!-- Input Number of person -->
+        <input
+          type="number"
+          id="number_person"
+          placeholder="UNKNOW_TYPE"
+          required
+        />
+      </div>
+      <!-- กล่องใส่ What would you want to avail -->
+      <div>
+        <!-- หัวข้อของ What would you want to avail -->
+        <label for="">What would you want to avail?*:</label><br />
+        <label for="boarding">Boarding</label>
+        <!-- Input What would you want to avail -->
+        <input
+          type="checkbox"
+          name="avail_checkbox[]"
+          id="boarding"
+          value="boarding"
+        /><br />
+        <label for="fooding">Fooding</label>
+        <!-- Input What would you want to avail -->
+        <input
+          type="checkbox"
+          name="avail_checkbox[]"
+          id="fooding"
+          value="fooding"
+        /><br />
+        <!-- Input What would you want to avail -->
+        <label for="sight_seeing">Sight seeing</label>
+        <input
+          type="checkbox"
+          name="avail_checkbox[]"
+          id="sight_seeing"
+          value="sight_seeing"
+        /><br />
+      </div>
+      <!-- กล่องใส่ Discount Coupon code -->
+      <div>
+        <!-- หัวข้อของ Discount Coupon code -->
+        <label for="discount_code">Discount Coupon code: </label><br />
+        <!-- Input Discount Coupon code -->
+        <input
+          type="text"
+          class="text"
+          id="discount_code"
+          placeholder="UNKNOW_TYPE"
+        />
+      </div>
+      <!-- กล่องใส่ Terms and conditions -->
+      <div>
+        <!-- หัวข้อของ Terms and conditions -->
+        <label for="terms_and_conditions_section">Terms and conditions*</label
+        ><br />
+        <!-- Input Terms and conditions (Agree) -->
+        <input
+          type="radio"
+          name="terms_and_conditions"
+          id="agree"
+          value="agree"
+          checked
+        />
         <label for="agree">I agree</label>
-        <input type="radio" name="terms_and_conditions" id="disagree" value="disagree">
+        <!-- Input Terms and conditions (Disagree) -->
+        <input
+          type="radio"
+          name="terms_and_conditions"
+          id="disagree"
+          value="disagree"
+        />
         <label for="disagree">I disagree</label>
-    </div>
-    <button type="button">Complete reservation</button>
+      </div>
+      <!-- ปุ่มตกลง -->
+      <button type="button">Complete reservation</button>
+    </form>
   </body>
 </html>
